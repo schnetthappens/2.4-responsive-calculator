@@ -3,3 +3,35 @@ $border-box-sizing: true !default;
 
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
+
+
+/* VARIABLES
+$display-color: #20242A;
+$operator-color: 	#003333;
+$operator-text-color: #fff; */
+
+
+.content {
+  @include outer-container(680px);
+  height: 400px;
+  /* background-color: green; */
+}
+
+.display {
+  @include span-columns(12);
+  height: 50px;
+  /* background-color: $display-color; */
+}
+
+.row {
+  height: 50px;
+}
+
+button {
+  @include span-columns(3 of 12);
+  height: 60%;
+}
+
+.row5 .zero {
+  @include span-columns(6 of 12);
+}
