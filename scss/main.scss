@@ -1,37 +1,66 @@
-$visual-grid: true !default;
+/* $visual-grid: true !default; */
 $border-box-sizing: true !default;
+$gutter: 0em;
 
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 
-/* VARIABLES
+/*VARIABLES*/
+$font-family: 'Lato', sans-serif;
 $display-color: #20242A;
-$operator-color: 	#003333;
-$operator-text-color: #fff; */
+$display-text-color: #fff;
+$operator-color: 	#023C3C;
+$operator-text-color: #fff;
 
+
+body {
+  font-family: $font-family;
+  font-weight: 700;
+}
 
 .content {
   @include outer-container(680px);
   height: 400px;
-  /* background-color: green; */
+  margin: 5em auto;
 }
 
-.display {
-  @include span-columns(12);
-  height: 50px;
-  /* background-color: $display-color; */
-}
+  .display-box {
+    @include span-columns(12);
+    height: 80px;
+    background-color: $display-color;
+    color: $display-text-color;
+    opacity: 0.7;
+    border-radius: 3px;
+  }
 
-.row {
-  height: 50px;
-}
+    .display-box h2 {
+      font-size: 4em;
+      margin: 0;
+      text-align: right;
+      vertical-align: baseline;
+    }
 
-button {
-  @include span-columns(3 of 12);
-  height: 60%;
-}
+  button {
+    @include span-columns(3);
+    @include omega;
+    height: 50px;
+    font-size: 1.5em;
+  }
 
-.row5 .zero {
-  @include span-columns(6 of 12);
-}
+  .zero {
+    @include span-columns(6);
+    @include omega;
+    padding: 0;
+  }
+
+
+
+  /*STYLES, COLORS*/
+
+
+  .operator {
+    background-color: $operator-color;
+    color: $operator-text-color;
+    opacity: 0.5;
+  }
